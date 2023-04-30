@@ -1,5 +1,5 @@
 {% set name = "skbase" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0f1c113fe094725f22619b30c6c8093ec77027d937adf1c2246de9344f10228e
+  sha256: 5c49c47420a9bdea861415187019319cb6dac6933675629df34a17f92c600c08
 
 build:
   number: 1
@@ -41,7 +41,7 @@ outputs:
         - scikit-learn >=0.24.0,<1.3.0
         - typing-extensions
         - pytest
-      
+
     test:
       requires:
         - pip
@@ -70,7 +70,7 @@ outputs:
         - pytest
         - pandas
         - numpy
-    
+
     test:
       imports:
         - skbase
