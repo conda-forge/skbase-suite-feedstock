@@ -245,4 +245,5 @@ Feedstock Maintainers
 =====================
 
 * [@RNKuhns](https://github.com/RNKuhns/)
+* [@fkiraly](https://github.com/fkiraly/)
 
