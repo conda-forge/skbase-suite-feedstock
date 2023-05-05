@@ -1,5 +1,5 @@
 {% set name = "skbase" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5c49c47420a9bdea861415187019319cb6dac6933675629df34a17f92c600c08
+  sha256: 1cd29f974ae8b15a28e66a7547006387db3a8b5c8a520bcadb4083293b535976
 
 build:
-  number: 1
+  number: 0
   # noarch: python
 
 requirements:
