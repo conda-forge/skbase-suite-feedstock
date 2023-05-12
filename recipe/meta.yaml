@@ -42,6 +42,8 @@ outputs:
     test:
       requires:
         - pip
+        - pytest
+        - scikit-learn>=0.24.0
       commands:
         - pip check
       imports:
@@ -76,6 +78,8 @@ outputs:
         - pip check
       requires:
         - pip
+        - pytest
+        - scikit-learn>=0.24.0
 
 about:
   home: https://github.com/sktime/skbase
