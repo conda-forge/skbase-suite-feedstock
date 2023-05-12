@@ -43,6 +43,9 @@ outputs:
       requires:
         - pip
         - pytest
+        - numpy
+        - scipy
+        - pandas
         - scikit-learn>=0.24.0
       commands:
         - pip check
@@ -79,6 +82,9 @@ outputs:
       requires:
         - pip
         - pytest
+        - numpy
+        - scipy
+        - pandas
         - scikit-learn>=0.24.0
 
 about:
