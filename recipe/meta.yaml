@@ -25,7 +25,7 @@ requirements:
     - python
 
 outputs:
-  - name: {{ name|lower }}
+  - name: scikit-base
     script: build_script.sh  # [unix]
     script: build_script.bat  # [win]
     requirements:
@@ -56,7 +56,7 @@ outputs:
         - skbase.testing
         - skbase.validate
 
-  - name: {{ name|lower }}-all-extras
+  - name: scikit-base-all-extras
     build:
       noarch: python
     requirements:
@@ -66,7 +66,7 @@ outputs:
         - setuptools
       run:
         - python >=3.7,<3.12
-        - {{ pin_subpackage("skbase", exact=True) }}
+        - {{ pin_subpackage("scikit-base", exact=True) }}
         - pandas
         - numpy
 
