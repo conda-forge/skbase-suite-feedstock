@@ -1,4 +1,4 @@
-{% set name = "skbase" %}
+{% set name = "scikit-base" %}
 {% set version = "0.4.3" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1cd29f974ae8b15a28e66a7547006387db3a8b5c8a520bcadb4083293b535976
+  sha256: 0e7ef9d94c6975a87a4ef1ce4208653e3123141d86c5736bd9793800ab669d22
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - python
 
 outputs:
-  - name: scikit-base
+  - name: {{ name|lower }}
     script: build_script.sh  # [unix]
     script: build_script.bat  # [win]
     requirements:
@@ -56,7 +56,7 @@ outputs:
         - skbase.testing
         - skbase.validate
 
-  - name: scikit-base-all-extras
+  - name: {{ name|lower }}-all-extras
     build:
       noarch: python
     requirements:
