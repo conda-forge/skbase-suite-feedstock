@@ -1,5 +1,5 @@
-About skbase-suite-feedstock
-============================
+About scikit-base-suite-feedstock
+=================================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/skbase-suite-feedstock/blob/main/LICENSE.txt)
 
@@ -127,54 +127,54 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-skbase-green.svg)](https://anaconda.org/conda-forge/skbase) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/skbase.svg)](https://anaconda.org/conda-forge/skbase) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/skbase.svg)](https://anaconda.org/conda-forge/skbase) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/skbase.svg)](https://anaconda.org/conda-forge/skbase) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-skbase--all--extras-green.svg)](https://anaconda.org/conda-forge/skbase-all-extras) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/skbase-all-extras.svg)](https://anaconda.org/conda-forge/skbase-all-extras) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/skbase-all-extras.svg)](https://anaconda.org/conda-forge/skbase-all-extras) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/skbase-all-extras.svg)](https://anaconda.org/conda-forge/skbase-all-extras) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scikit--base-green.svg)](https://anaconda.org/conda-forge/scikit-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scikit-base.svg)](https://anaconda.org/conda-forge/scikit-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scikit-base.svg)](https://anaconda.org/conda-forge/scikit-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scikit-base.svg)](https://anaconda.org/conda-forge/scikit-base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scikit--base--all--extras-green.svg)](https://anaconda.org/conda-forge/scikit-base-all-extras) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scikit-base-all-extras.svg)](https://anaconda.org/conda-forge/scikit-base-all-extras) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scikit-base-all-extras.svg)](https://anaconda.org/conda-forge/scikit-base-all-extras) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scikit-base-all-extras.svg)](https://anaconda.org/conda-forge/scikit-base-all-extras) |
 
-Installing skbase-suite
-=======================
+Installing scikit-base-suite
+============================
 
-Installing `skbase-suite` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `scikit-base-suite` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `skbase, skbase-all-extras` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `scikit-base, scikit-base-all-extras` can be installed with `conda`:
 
 ```
-conda install skbase skbase-all-extras
-```
-
-or with `mamba`:
-
-```
-mamba install skbase skbase-all-extras
-```
-
-It is possible to list all of the versions of `skbase` available on your platform with `conda`:
-
-```
-conda search skbase --channel conda-forge
+conda install scikit-base scikit-base-all-extras
 ```
 
 or with `mamba`:
 
 ```
-mamba search skbase --channel conda-forge
+mamba install scikit-base scikit-base-all-extras
+```
+
+It is possible to list all of the versions of `scikit-base` available on your platform with `conda`:
+
+```
+conda search scikit-base --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search scikit-base --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search skbase --channel conda-forge
+mamba repoquery search scikit-base --channel conda-forge
 
-# List packages depending on `skbase`:
-mamba repoquery whoneeds skbase --channel conda-forge
+# List packages depending on `scikit-base`:
+mamba repoquery whoneeds scikit-base --channel conda-forge
 
-# List dependencies of `skbase`:
-mamba repoquery depends skbase --channel conda-forge
+# List dependencies of `scikit-base`:
+mamba repoquery depends scikit-base --channel conda-forge
 ```
 
 
@@ -219,17 +219,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating skbase-suite-feedstock
-===============================
+Updating scikit-base-suite-feedstock
+====================================
 
-If you would like to improve the skbase-suite recipe or build a new
+If you would like to improve the scikit-base-suite recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/skbase-suite-feedstock are
+Note that all branches in the conda-forge/scikit-base-suite-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
@@ -246,4 +246,3 @@ Feedstock Maintainers
 
 * [@RNKuhns](https://github.com/RNKuhns/)
 * [@fkiraly](https://github.com/fkiraly/)
-
