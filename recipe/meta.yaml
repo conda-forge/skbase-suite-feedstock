@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  # noarch: python
+  skip: true  # [(py==37 and aarch64)]
+  skip: true  # [py<37 or py>311]
 
 requirements:
   build:
@@ -19,8 +20,6 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - pip
-    - setuptools
   run:
     - python
 
@@ -58,6 +57,9 @@ outputs:
 
   - name: {{ name|lower }}-all-extras
     build:
+      #FIXME: Extras environment not resolvable on aarch. Needs someone with
+      #arm machine to tests.
+      skip: true  # [aarch64]
       noarch: python
     requirements:
       host:
