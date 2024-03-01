@@ -1,5 +1,5 @@
 {% set name = "scikit-base" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: da28651b5ca91ebb9f90d15cdf5f0f7e8058528d0b2205b9183d900912ead5fe
+  sha256: 5b2aa1c00746e8891b6eea5c7350164930b39fd825f082588ba39ba8b931136f
 
 build:
   number: 0
