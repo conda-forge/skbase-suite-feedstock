@@ -304,6 +304,3 @@ Feedstock Maintainers
 * [@fkiraly](https://github.com/fkiraly/)
 * [@yarnabrina](https://github.com/yarnabrina/)
 
-
-<!-- dummy commit to enable rerendering -->
-
