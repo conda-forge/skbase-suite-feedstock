@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   skip: true  # [(py==37 and aarch64)]
-  skip: true  # [py<37 or py>311]
+  skip: true  # [py<37 or py>312]
 
 requirements:
   build:
@@ -36,7 +36,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - python >=3.7,<3.12
+        - python >=3.7,<3.13
 
     test:
       requires:
@@ -67,7 +67,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - python >=3.7,<3.12
+        - python >=3.7,<3.13
         - {{ pin_subpackage("scikit-base", exact=True) }}
         - pandas
         - numpy
