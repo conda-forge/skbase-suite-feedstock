@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    noarch: python
+    - python
   host:
     - python
   run:
@@ -52,8 +52,6 @@ outputs:
         - skbase.validate
 
   - name: {{ name|lower }}-all-extras
-    build:
-      noarch: python
     requirements:
       host:
         - python
