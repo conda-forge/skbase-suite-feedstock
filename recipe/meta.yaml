@@ -16,8 +16,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    noarch: python
   host:
     - python
   run:
@@ -28,9 +27,6 @@ outputs:
     script: build_script.sh  # [unix]
     script: build_script.bat  # [win]
     requirements:
-      build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - python
         - pip
@@ -57,9 +53,6 @@ outputs:
 
   - name: {{ name|lower }}-all-extras
     build:
-      #FIXME: Extras environment not resolvable on aarch. Needs someone with
-      #arm machine to tests.
-      skip: true  # [aarch64]
       noarch: python
     requirements:
       host:
