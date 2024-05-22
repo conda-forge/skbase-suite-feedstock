@@ -2,14 +2,8 @@
 set -e
 set -x  # Enable script debugging for verbose logging
 
-# Check for arm64 architecture
-if [ "$(uname -m)" == "aarch64" ]; then
-    echo "Building for arm64 architecture"
-    # Ensure the correct Python executable is used
-    export PYTHON_EXE="$CONDA_PREFIX/bin/python"
-else
-    export PYTHON_EXE="$PYTHON"
-fi
+# Specify the Python executable path for arm64 architecture
+PYTHON_EXE="/opt/miniforge3/bin/python"
 
 # Install the package
 $PYTHON_EXE -m pip install . --no-deps -vv --no-build-isolation
