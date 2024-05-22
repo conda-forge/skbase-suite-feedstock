@@ -16,10 +16,13 @@ build:
 requirements:
   build:
     - python
+    - {{ compiler('c') }}
   host:
     - python
+    - pip
+    - setuptools
   run:
-    - python
+    - python >=3.7,<3.13
 
 outputs:
   - name: {{ name|lower }}
