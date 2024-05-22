@@ -6,7 +6,7 @@ set -x  # Enable script debugging for verbose logging
 if [ "$(uname -m)" == "aarch64" ]; then
     echo "Building for arm64 architecture"
     # Ensure the correct Python executable is used
-    export PYTHON_EXE="$(which python)"
+    export PYTHON_EXE="$CONDA_PREFIX/bin/python"
 else
     export PYTHON_EXE="$PYTHON"
 fi
