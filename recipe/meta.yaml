@@ -10,6 +10,7 @@ source:
   sha256: e175748b051b7b55f3b7713d53f5336ecfdfb42aa2f17aceb913b075511a8b33
 
 build:
+  noarch: python
   number: 0
   skip: true  # [(py==37 and aarch64)]
   skip: true  # [py<37 or py>312]
