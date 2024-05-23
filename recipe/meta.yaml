@@ -15,7 +15,8 @@ build:
 
 requirements:
   build:
-    noarch: python
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
@@ -30,6 +31,9 @@ outputs:
     build:
       noarch: python
     requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - python
         - pip
