@@ -11,8 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [(py==37 and aarch64)]
-  skip: true  # [py<37 or py>312]
+  noarch: python
 
 requirements:
   build:
@@ -20,17 +19,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
+    - pip
+    - setuptools
   run:
-    - python
+    - python >=3.7,<3.13
 
 outputs:
   - name: {{ name|lower }}
     script: build_script.sh  # [unix]
     script: build_script.bat  # [win]
     requirements:
-      build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - python
         - pip
@@ -56,11 +54,6 @@ outputs:
         - skbase.validate
 
   - name: {{ name|lower }}-all-extras
-    build:
-      #FIXME: Extras environment not resolvable on aarch. Needs someone with
-      #arm machine to tests.
-      skip: true  # [aarch64]
-      noarch: python
     requirements:
       host:
         - python
