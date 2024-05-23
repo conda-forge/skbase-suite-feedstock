@@ -24,8 +24,7 @@ outputs:
   - name: {{ name|lower }}
     build:
       noarch: python
-      script:
-        - python -m pip install . -vv --no-deps --no-build-isolation --no-index --no-compile
+      script: python -m pip install . -vv --no-deps --no-build-isolation --no-index --no-compile
     requirements:
       host:
         - python >=3.7,<3.13
