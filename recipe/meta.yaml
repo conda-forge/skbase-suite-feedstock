@@ -15,8 +15,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    noarch: python
   host:
     - python
     - pip
@@ -28,6 +27,8 @@ outputs:
   - name: {{ name|lower }}
     script: build_script.sh  # [unix]
     script: build_script.bat  # [win]
+    build:
+      noarch: python
     requirements:
       host:
         - python
@@ -54,6 +55,8 @@ outputs:
         - skbase.validate
 
   - name: {{ name|lower }}-all-extras
+    build:
+      noarch: python
     requirements:
       host:
         - python
