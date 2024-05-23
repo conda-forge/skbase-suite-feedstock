@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [(py<37 or py>312) or (aarch64 and py==37)]  # Consolidated skip conditions
   noarch: python
 
 requirements:
