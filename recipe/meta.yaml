@@ -93,6 +93,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - yarnabrina
     - fkiraly
+    - mcre-be
+    - yarnabrina
     - RNKuhns
