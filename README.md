@@ -149,6 +149,8 @@ Feedstock Maintainers
 =====================
 
 * [@RNKuhns](https://github.com/RNKuhns/)
+* [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@fkiraly](https://github.com/fkiraly/)
+* [@mcre-be](https://github.com/mcre-be/)
 * [@yarnabrina](https://github.com/yarnabrina/)
 
