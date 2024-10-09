@@ -27,11 +27,11 @@ outputs:
       script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-index --no-compile
     requirements:
       host:
-        - python >=3.7,<3.13
+        - python >=3.7,<3.14
         - pip
         - setuptools
       run:
-        - python >=3.7,<3.13
+        - python >=3.7,<3.14
 
     test:
       requires:
@@ -55,9 +55,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7,<3.13
+        - python >=3.7,<3.14
       run:
-        - python >=3.7,<3.13
+        - python >=3.7,<3.14
         - {{ pin_subpackage("scikit-base", exact=True) }}
         - pandas
         - numpy
