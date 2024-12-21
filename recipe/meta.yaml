@@ -11,13 +11,13 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 
 outputs:
@@ -27,11 +27,11 @@ outputs:
       script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --no-index --no-compile
     requirements:
       host:
-        - python >=3.7,<3.14
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.7,<3.14
+        - python >={{ python_min }},<3.14
 
     test:
       requires:
@@ -41,6 +41,7 @@ outputs:
         - scipy
         - pandas
         - scikit-learn>=0.24.0
+        - python {{ python_min }}
       commands:
         - pip check
       imports:
@@ -55,9 +56,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7,<3.14
+        - python {{ python_min }}
       run:
-        - python >=3.7,<3.14
+        - python >={{ python_min }},<3.14
         - {{ pin_subpackage("scikit-base", exact=True) }}
         - pandas
         - numpy
@@ -78,6 +79,7 @@ outputs:
         - scipy
         - pandas
         - scikit-learn>=0.24.0
+        - python {{ python_min }}
 
 about:
   home: https://github.com/sktime/skbase
