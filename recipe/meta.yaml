@@ -40,7 +40,7 @@ outputs:
         - numpy
         - scipy
         - pandas
-        - scikit-learn>=0.24.0
+        - scikit-learn >=0.24.0
         - python {{ python_min }}
       commands:
         - pip check
@@ -78,7 +78,7 @@ outputs:
         - numpy
         - scipy
         - pandas
-        - scikit-learn>=0.24.0
+        - scikit-learn >=0.24.0
         - python {{ python_min }}
 
 about:
