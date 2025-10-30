@@ -31,7 +31,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - python >={{ python_min }},<3.14
+        - python >={{ python_min }},<3.15
 
     test:
       requires:
@@ -58,7 +58,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.14
+        - python >={{ python_min }},<3.15
         - {{ pin_subpackage("scikit-base", exact=True) }}
         - pandas
         - numpy
